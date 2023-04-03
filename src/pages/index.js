@@ -6,6 +6,7 @@ import { PathokButton } from "@/components/atoms";
 
 import { Box, Text } from "@chakra-ui/react";
 import { Navbar } from "@/components/molecules";
+import { HeroSection } from "@/components/molecules/HeroSection";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,26 +20,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div>
+      <Box>
         <Navbar></Navbar>
-      </div>
-
-      {/* <nav>
-        <Box height={157} width="100%" bgColor="#002E38">
-          <PathokButton text="Button" />
-          <Text
-            color="#fff"
-            textAlign="center"
-            fontSize={["10px", "50px", "100px"]}
-          ></Text>
-        </Box>
-        <Image
-          width={100}
-          height={100}
-          src="/images/bkash-logo-dark.90c635aa.png"
-          alt="demo"
-        />
-      </nav> */}
+      </Box>
+      <Box>
+        <HeroSection></HeroSection>
+      </Box>
     </>
   );
 }
