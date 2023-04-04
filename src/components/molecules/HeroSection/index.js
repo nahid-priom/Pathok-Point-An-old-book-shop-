@@ -1,8 +1,5 @@
-import { ImageFrame, PathokButton } from "@/components/atoms";
+import { ImageFrame, PathokButton, Timer } from "@/components/atoms";
 import { Box, Text } from "@chakra-ui/react";
-import { useState, useEffect } from 'react';
-import { CountdownCircleTimer } from 'react-countdown-circle-timer';
-
 
 export const HeroSection = () => {
   return (
@@ -126,8 +123,40 @@ export const HeroSection = () => {
             borderRadius="10px"
             paddingLeft="10px"
             paddingRight="10px"
-          >Best Deal</Text>
-          
+          >
+            Best Deal
+          </Text>
+        </Box>
+        <Box
+          bgColor="#FD6C03"
+          width="-webkit-fit-content"
+          textColor="white"
+          position="absolute"
+          top="620px"
+          fontSize="22px"
+          left="802px"
+          fontWeight={800}
+          padding="2px 10px 0 10px"
+          borderRadius="10px"
+        >
+          <Timer color="#fff" duration={20 * 24 * 60 * 60 * 1000}></Timer>
+          <Box display="flex" fontWeight="500" >
+            <Text fontSize={10} padding="0 5px 5px 3px" >Days</Text>
+            <Text fontSize={10}padding="0 5px 5px 12px">Hours</Text>
+            <Text fontSize={10}padding="0 5px 5px 12px">Mins</Text>
+          </Box>
+          <PathokButton
+            text="Shop Now"
+            width={90}
+            height={6}
+            color="#000"
+            bgColor="#FFD707"
+            fontSize="14px"
+            fontWeight={400}
+            position="absolute"
+            top="70px"
+            left="24px"
+          />
         </Box>
       </Box>
     </Box>
