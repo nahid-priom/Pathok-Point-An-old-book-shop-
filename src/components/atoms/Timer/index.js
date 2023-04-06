@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 export const Timer = ({ duration }) => {
   const [time, setTime] = useState(duration);
 
+setTimeout(() => {},1000)
+
   useEffect(() => {
     setTimeout(() => {
       setTime(time - 1000);

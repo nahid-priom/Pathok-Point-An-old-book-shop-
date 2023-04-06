@@ -20,6 +20,7 @@ export const HeroSection = () => {
           objectFit="cover"
           marginRight="81px"
           borderRadius="15px"
+          
         />
         <Text
           position="absolute"
@@ -47,6 +48,7 @@ export const HeroSection = () => {
           position="absolute"
           top="505px"
           left="165px"
+          boxShadow="3px 3px #6E6A6A"
         />
       </Box>
       <Box display="flex" flexDirection="column">
@@ -100,6 +102,7 @@ export const HeroSection = () => {
             position="absolute"
             top="140px"
             left="63px"
+
           />
         </Box>
         <Box position="relative">
@@ -140,10 +143,16 @@ export const HeroSection = () => {
           borderRadius="10px"
         >
           <Timer color="#fff" duration={20 * 24 * 60 * 60 * 1000}></Timer>
-          <Box display="flex" fontWeight="500" >
-            <Text fontSize={10} padding="0 5px 5px 3px" >Days</Text>
-            <Text fontSize={10}padding="0 5px 5px 12px">Hours</Text>
-            <Text fontSize={10}padding="0 5px 5px 12px">Mins</Text>
+          <Box display="flex" fontWeight="500">
+            <Text fontSize={10} padding="0 5px 5px 3px">
+              Days
+            </Text>
+            <Text fontSize={10} padding="0 5px 5px 12px">
+              Hours
+            </Text>
+            <Text fontSize={10} padding="0 5px 5px 12px">
+              Mins
+            </Text>
           </Box>
           <PathokButton
             text="Shop Now"
@@ -156,6 +165,7 @@ export const HeroSection = () => {
             position="absolute"
             top="70px"
             left="24px"
+            boxShadow="2px 2px #6E6A6A"
           />
         </Box>
       </Box>

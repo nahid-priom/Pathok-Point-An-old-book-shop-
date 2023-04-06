@@ -115,7 +115,7 @@ export const Navbar = () => {
               bgColor="#FFD707"
               fontSize="20px"
               fontWeight={400}
-            />
+            ></PathokButton>
           </Box>
         </Box>
         <Box

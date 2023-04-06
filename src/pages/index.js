@@ -1,12 +1,13 @@
 import Head from "next/head";
-import Image from "next/image";
 import { Inter } from "next/font/google";
-
-import { PathokButton } from "@/components/atoms";
-
-import { Box, Text } from "@chakra-ui/react";
-import { Navbar } from "@/components/molecules";
-import { HeroSection } from "@/components/molecules/HeroSection";
+import { Box } from "@chakra-ui/react";
+import {
+  Navbar,
+  HeroSection,
+  BestSellingBooks,
+  Footer,
+  BestBook,
+} from "@/components/molecules";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,9 +23,11 @@ export default function Home() {
 
       <Box>
         <Navbar></Navbar>
-      </Box>
-      <Box>
+
         <HeroSection></HeroSection>
+        <BestSellingBooks></BestSellingBooks>
+        <BestBook></BestBook>
+        <Footer></Footer>
       </Box>
     </>
   );
