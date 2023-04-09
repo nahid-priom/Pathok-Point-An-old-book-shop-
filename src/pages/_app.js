@@ -1,4 +1,4 @@
-import { ChakraProvider } from "@chakra-ui/react";
+import { Box, ChakraProvider } from "@chakra-ui/react";
 import { theme } from "@/styles/theme";
 
 import { Roboto } from "next/font/google";
@@ -11,10 +11,10 @@ const rotobo = Roboto({
 
 export default function App({ Component, pageProps }) {
   return (
-    <main className={rotobo.className}>
+    <Box className={rotobo.className} overflowX="hidden">
       <ChakraProvider theme={theme}>
         <Component {...pageProps} />
       </ChakraProvider>
-    </main>
+    </Box>
   );
 }

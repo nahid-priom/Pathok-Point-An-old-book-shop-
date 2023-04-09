@@ -7,16 +7,16 @@ import {
   InputGroup,
   InputRightElement,
   InputLeftElement,
-  list,
-  transition,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  IconButton,
 } from "@chakra-ui/react";
-import {
-  List,
-  UnorderedList,
-} from "@chakra-ui/react";
+import { List, UnorderedList } from "@chakra-ui/react";
 
 import { FaShoppingCart } from "react-icons/fa";
-import { SearchIcon, TriangleDownIcon } from "@chakra-ui/icons";
+import { SearchIcon, TriangleDownIcon, HamburgerIcon } from "@chakra-ui/icons";
 import React from "react";
 import Image from "next/image";
 import { PathokButton } from "@/components/atoms";
@@ -27,31 +27,86 @@ export const Navbar = () => {
   return (
     <>
       <Box
-        width="100%"
-        height={125}
+        w="100%"
+        height={{ base: "140px", md: "125px" }}
         bgColor="#20687B"
-        position="absolute"
-        borderRadius="0 0 20px 20px"
+        position="unset"
       >
         <Box
           display="flex"
+          flexDirection={{ base: "column", md: "row" }}
           alignItems="center"
           maxW="1110px"
           justifyContent="space-evenly"
-          margin="13px auto"
-          paddingRight="15px"
+          margin="0 auto"
+          paddingTop={3}
         >
-          <Image
-            // style={{ marginTop: "15px", marginLeft: "175px" }}
-            src="/images/PathokIcon.png"
-            alt="PathokIcon"
-            position="absolute"
-            width={232}
-            height={46}
-          />
+          <Box display={{ base: "none", md: "block" }}>
+            <Link href="/">
+              <Image
+                src="/images/PathokIcon.png"
+                alt="PathokIcon"
+                width={260}
+                height={46}
+              />
+            </Link>
+          </Box>
+
+          <Box
+            display={{ base: "flex", md: "none" }}
+            justifyContent="space-around"
+            width="100%"
+          >
+            <Menu>
+              <MenuButton
+                as={IconButton}
+                
+                icon={
+                  <HamburgerIcon
+                    display={{ base: "block", md: "none" }}
+                    color="#fff"
+                    fontSize={25}
+                  />
+                }
+                variant="outline"
+              />
+              <MenuList zIndex={5}>
+                <MenuItem as="a" href="/login">Log in</MenuItem>
+                <MenuItem as="a" href="/signup">Sign Up</MenuItem>
+                <MenuItem as="a" href="#">Fiction</MenuItem>
+                <MenuItem as="a" href="#">Non-Fiction</MenuItem>
+                <MenuItem as="a" href="#">Authors</MenuItem>
+                <MenuItem as="a" href="#">Publishers</MenuItem>
+                <MenuItem as="a" href="#">Islamic Books</MenuItem>
+                <MenuItem as="a" href="#">University Books</MenuItem>
+                <MenuItem as="a" href="#">HSC Admission</MenuItem>
+                
+              </MenuList>
+            </Menu>
+            {/* <HamburgerIcon
+              display={{ base: "block", md: "none" }}
+              color="#fff"
+              fontSize={33}
+            /> */}
+            <Link href="/">
+              <Image
+                src="/images/PathokIcon.png"
+                alt="PathokIcon"
+                width={260}
+                height={46}
+              />
+            </Link>
+            <Icon
+              as={FaShoppingCart}
+              display={{ base: "block", md: "none" }}
+              color="#fff"
+              fontSize={30}
+            />
+          </Box>
+
           <Box>
-            <InputGroup width="565px">
-              <InputLeftElement width="70px">
+            <InputGroup width={{ base: "350px", md: "450px" }}>
+              <InputLeftElement width="12%">
                 <Button
                   width="100%"
                   height={37}
@@ -72,14 +127,13 @@ export const Navbar = () => {
                 type="text"
                 placeholder="Search by Books"
                 width="100%"
-                // height={39}
                 bgColor="#fff"
                 borderRadius="20px"
                 paddingLeft="80px"
               />
               <InputRightElement>
                 <Button
-                  width="50px"
+                  width="12%"
                   height={39}
                   bgColor="#FFD707"
                   borderRadius="0px 20px 20px 0px"
@@ -98,33 +152,39 @@ export const Navbar = () => {
           <Box
             width={34}
             height={26}
-            display="flex"
+            display={{ base: "none", md: "flex" }}
             justifyContent="center"
-            // style={{ marginTop: "27px", marginLeft: "50px" }}
           >
             <Icon as={FaShoppingCart} color="#fff" fontSize={30} />
-            <Text color="#fff" fontSize={20} paddingLeft={1}>
+            <Text
+              color="#fff"
+              fontSize={20}
+              paddingLeft={1}
+              top={{ base: "0" }}
+            >
               0
             </Text>
           </Box>
-          <Box>
-            <PathokButton
-              text="Login"
-              width={105}
-              height={30}
-              bgColor="#FFD707"
-              fontSize="20px"
-              fontWeight={400}
-            ></PathokButton>
+          <Box display={{ base: "none", md: "block" }}>
+            <Link href="/login">
+              <PathokButton
+                text="Login"
+                width={105}
+                height={30}
+                bgColor="#FFD707"
+                fontSize="20px"
+                fontWeight={400}
+              ></PathokButton>
+            </Link>
           </Box>
         </Box>
         <Box
-          display="flex"
+          display={{ base: "none", md: "flex" }}
           justifyContent="space-evenly"
           color="#fff"
           fontSize={18}
           maxW="1034px"
-          m="0 auto"
+          m="15px auto"
         >
           {navLinks.map((link, index) => {
             return (

@@ -4,37 +4,45 @@ import { Box, Text } from "@chakra-ui/react";
 export const HeroSection = () => {
   return (
     <Box
-      display="flex"
-      padding="188px"
-      maxW="1440px"
-      margin="0 auto"
+      display={{ base: "flex", md: "flex" }}
+      flexDirection={{ base: "column", md: "row" }}
+      justifyContent={{ base: "center" }}
+      maxW="1110px"
       alignItems="center"
-      justifyContent="space-between"
+      margin={{ base: "0px", md: "50px auto" }}
     >
-      <Box position="relative">
-        <ImageFrame
-          src="/images/hero1.jpg"
-          alt="PathokIcon"
-          width="508px"
-          height="600px"
-          objectFit="cover"
-          marginRight="81px"
-          borderRadius="15px"
-          
-        />
-        <Text
+      <Box
+        bgImg="/images/hero1.jpg"
+        w={{ base: "100%", sm: "100%", md: "508px" }}
+        h={{ base: "460px", md: "600px" }}
+        bgSize="cover"
+        position="relative"
+        borderRadius={{ base: "none", md: "15px" }}
+        display="flex"
+        flexDirection="column"
+        alignItems="center"
+        justifyContent="center"
+        marginRight={{ md: "30px", lg: "50px", xl: "70px" }}
+        boxShadow="0 4px 4px #00000040"
+      >
+        <Box
           position="absolute"
-          top="440px"
-          left="73px"
-          color="#000"
+          borderRadius={{ base: "none", md: "15px" }}
+          w="100%"
+          h="100%"
+          bgColor="#000"
+          top="0px"
+          opacity={0.4}
+        ></Box>
+        <Text
+          color="#fff"
           fontWeight={600}
-          fontSize="30px"
+          fontSize={{ base: "25px", md: "25px", xl: "30px" }}
           textDecoration="Background"
-          alignItems="center"
-          border="2px solid #FFD707"
+          textAlign="center"
           borderRadius="10px"
-          paddingLeft="10px"
-          paddingRight="10px"
+          paddingBottom="20px"
+          zIndex={1}
         >
           Featured Books of March{" "}
         </Text>
@@ -45,114 +53,127 @@ export const HeroSection = () => {
           bgColor="#FFD707"
           fontSize="20px"
           fontWeight={400}
-          position="absolute"
-          top="505px"
-          left="165px"
-          boxShadow="3px 3px #6E6A6A"
+          
         />
       </Box>
-      <Box display="flex" flexDirection="column">
-        <Box position="relative">
-          <ImageFrame
-            src="/images/hero2.jpg"
-            alt="PathokIcon"
-            width="523px"
-            height="275px"
-            objectFit="cover"
-            borderRadius="15px"
-            marginBottom="50px"
-          />
+      <Text
+        variant="h2"
+        display={{ base: "block", md: "none" }}
+        margin="15px 0"
+        fontSize={20}
+        fontWeight={600}
+        textAlign="center"
+      >
+        Top Rated Seller
+      </Text>
+      <Box
+        display="flex"
+        flexDirection="column"
+        justifyContent={{ md: "space-between" }}
+        w={{ base: "100%", sm: "100%", md: "508px" }}
+        h="600px"
+      >
+        <Box
+          bgImage="/images/hero2.jpg"
+          w="100%"
+          height="275px"
+          bgSize="cover"
+          borderRadius={{ base: "none", md: "15px" }}
+          display={{ base: "flex", md: "flex" }}
+          flexDirection="column"
+          justifyContent="center"
+          boxShadow="0 4px 4px #00000040"
+        >
           <Text
-            position="absolute"
-            top="60px"
-            left="43px"
             color="#FFD707"
             fontWeight={800}
-            fontSize="22px"
+            fontSize={{ base: "18px", md: "22px" }}
             textDecoration="Background"
             alignItems="center"
+            paddingLeft="45px"
             borderRadius="10px"
-            paddingLeft="10px"
-            paddingRight="10px"
           >
-            Best Seller
+            Best Selling
           </Text>
           <Text
-            position="absolute"
-            top="90px"
-            left="65px"
             color="#fff"
             fontWeight={800}
-            fontSize="22px"
+            fontSize={{ base: "18px", md: "22px" }}
             textDecoration="Background"
             alignItems="center"
             borderRadius="10px"
-            paddingLeft="10px"
-            paddingRight="10px"
+            paddingLeft={{ base: "70px", md: "75px" }}
+            width="auto"
           >
             Books
           </Text>
           <PathokButton
             text="Shop Now"
-            width={90}
+            width={{ base: "70px", md: "90px" }}
             height={6}
             bgColor="#FFD707"
             fontSize="14px"
             fontWeight={400}
-            position="absolute"
-            top="140px"
-            left="63px"
-
+            marginLeft="61px"
+            marginTop="10px"
           />
         </Box>
-        <Box position="relative">
-          <ImageFrame
-            src="/images/OIP.jpg"
-            alt="PathokIcon"
-            width="523px"
-            height="275px"
-            objectFit="cover"
-            borderRadius="15px"
-          />
+        <Text
+          variant="h2"
+          display={{ base: "block", md: "none" }}
+          margin="15px 0"
+          fontSize={20}
+          fontWeight={600}
+          textAlign="center"
+        >
+          Upcoming Deals
+        </Text>
+        <Box
+          bgImage="/images/OIP.jpg"
+          width="100%"
+          height="275px"
+          borderRadius={{ base: "none", md: "15px" }}
+          bgSize="cover"
+          display="flex"
+          flexDirection="column"
+          justifyContent="center"
+          boxShadow="0 4px 4px #00000040"
+        >
           <Text
-            position="absolute"
-            top="60px"
-            left="43px"
             color="#000438"
             fontWeight={800}
             fontSize="24px"
             textDecoration="Background"
             alignItems="center"
             borderRadius="10px"
-            paddingLeft="10px"
-            paddingRight="10px"
+            paddingLeft="70px"
           >
             Best Deal
           </Text>
-        </Box>
-        <Box
-          bgColor="#FD6C03"
-          width="-webkit-fit-content"
-          textColor="white"
-          position="absolute"
-          top="620px"
-          fontSize="22px"
-          left="802px"
-          fontWeight={800}
-          padding="2px 10px 0 10px"
-          borderRadius="10px"
-        >
-          <Timer color="#fff" duration={20 * 24 * 60 * 60 * 1000}></Timer>
-          <Box display="flex" fontWeight="500">
-            <Text fontSize={10} padding="0 5px 5px 3px">
-              Days
-            </Text>
-            <Text fontSize={10} padding="0 5px 5px 12px">
-              Hours
-            </Text>
-            <Text fontSize={10} padding="0 5px 5px 12px">
-              Mins
-            </Text>
+          <Box
+            bgColor="#FD6C03"
+            width="-webkit-fit-content"
+            textColor="white"
+            fontSize="22px"
+            fontWeight={800}
+            padding="2px 10px 0 10px"
+            borderRadius="10px"
+            marginLeft="56.5px"
+            marginTop={1}
+            marginBottom={13}
+          >
+            <Timer color="#fff" duration={20 * 24 * 60 * 60 * 1000}></Timer>
+            <Box display="flex" fontWeight="500">
+              <Text fontSize={10} padding="0 5px 5px 3px">
+                Days
+              </Text>
+              <Text fontSize={10} padding="0 5px 5px 12px">
+                Hours
+              </Text>
+              <Text fontSize={10} padding="0 5px 5px 12px">
+                Mins
+              </Text>
+            </Box>
           </Box>
           <PathokButton
             text="Shop Now"
@@ -162,10 +183,8 @@ export const HeroSection = () => {
             bgColor="#FFD707"
             fontSize="14px"
             fontWeight={400}
-            position="absolute"
-            top="70px"
-            left="24px"
             boxShadow="2px 2px #6E6A6A"
+            marginLeft="79px"
           />
         </Box>
       </Box>

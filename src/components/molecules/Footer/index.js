@@ -5,14 +5,23 @@ export const Footer = () => {
   return (
     <Box
       width="100%"
-      height="430px"
+      height="100%"
       bgColor="#20687B"
-      borderRadius="20px 20px 0 0"
-      marginTop={10}
+      borderRadius={{ base: "0px", md: "20px 20px 0 0" }}
+      // paddingLeft={{ base: "30px", md:"150px" }}
     >
-      <Box display="flex" justifyContent="space-around">
-        <Box color="#fff" marginTop={70}>
-          <Text fontSize={23} fontWeight={600} marginBottom={5}>
+      <Box
+        display="flex"
+        flexDirection="row"
+        flexWrap={{base:"wrap", md:"nowrap"}}
+        justifyContent="space-around"
+        alignItems="baseline"
+        paddingTop={{ base: "20px", md: "40px" }}
+        paddingLeft={{ base: "30px", md:"300px" }}
+        
+      >
+        <Box color="#fff" paddingBottom="20px" flex={{base: "50%", md: "1"}} >
+          <Text fontSize={23} fontWeight={600}>
             Useful Links
           </Text>
           <Text>Categories</Text>
@@ -20,8 +29,8 @@ export const Footer = () => {
           <Text>Authors</Text>
           <Text>Publications</Text>
         </Box>
-        <Box color="#fff" marginTop={70}>
-          <Text fontSize={23} fontWeight={600} marginBottom={5}>
+        <Box color="#fff" paddingBottom="20px" flex={{base: "50%", md: "1"}} paddingLeft={{base:"35px", md:"0px"}}>
+          <Text fontSize={23} fontWeight={600}>
             Help
           </Text>
           <Text>Books</Text>
@@ -30,8 +39,8 @@ export const Footer = () => {
           <Text>Gift Card</Text>
           <Text>Stationery</Text>
         </Box>
-        <Box color="#fff" marginTop={70}>
-          <Text fontSize={23} fontWeight={600} marginBottom={5}>
+        <Box color="#fff" paddingBottom="20px" flex={{base: "1px", md: "1"}}>
+          <Text fontSize={23} fontWeight={600}>
             Payment
           </Text>
           <Text>Order Track</Text>
@@ -43,25 +52,40 @@ export const Footer = () => {
         </Box>
       </Box>
       <Divider orientation="horizontal" marginTop={5}></Divider>
-      <Box display="flex" alignItems="center" justifyContent="center">
-        <Text fontSize={24} color="#fff" marginRight={10}>We accept payment via</Text>
-        <Box display="flex">
-          <Image
-            src="/images/Bkash.png"
-            width={144}
-            height={70}
-            alt="BkashImg"
-          ></Image>
-          <Image
-            src="/images/Nagad.png"
-            width={144}
-            height={75}
-            alt="BkashImg"
-          ></Image>
+      <Box
+        display={{ base: "flex", md: "flex" }}
+        flexDirection={{ base: "column", md: "row" }}
+        alignItems="center"
+        justifyContent="center"
+      >
+        <Box
+          display="flex"
+          flexDirection={{ base: "column", md: "row" }}
+          alignItems="center"
+        >
+          <Text fontSize={24} color="#fff" padding={{ md: "15px" }}>
+            We accept payment via
+          </Text>
+          <Box display="flex" justifyContent="center">
+            <Image
+              src="/images/Bkash.png"
+              width={{ base: "80px", md: "144px" }}
+              height={{ base: "50px", md: "70px" }}
+              alt="BkashImg"
+            ></Image>
+            <Image
+              src="/images/Nagad.png"
+              width={{ base: "80px", md: "144px" }}
+              height={{ base: "50px", md: "70px" }}
+              alt="BkashImg"
+            ></Image>
+          </Box>
         </Box>
       </Box>
-      <Divider orientation="horizontal" ></Divider>
-      <Text textAlign="center" color="#fff" marginTop={5} fontSize={12}>Copyright © 2023 Pahtok Point</Text>
+      <Divider orientation="horizontal"></Divider>
+      <Text textAlign="center" color="#fff" marginTop={5} fontSize={12} paddingBottom={3}>
+        Copyright © 2023 Pahtok Point
+      </Text>
     </Box>
   );
 };

@@ -1,0 +1,2 @@
+export { FacebookIcon } from "./FbIcon";
+

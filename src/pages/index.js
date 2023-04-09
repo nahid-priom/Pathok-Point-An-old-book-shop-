@@ -21,10 +21,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Box>
+      <Box width="100%">
         <Navbar></Navbar>
-
-        <HeroSection></HeroSection>
+        <Box margin={{base:"0px", md:"0 20px"}}>
+          <HeroSection />
+        </Box>
         <BestSellingBooks></BestSellingBooks>
         <BestBook></BestBook>
         <Footer></Footer>

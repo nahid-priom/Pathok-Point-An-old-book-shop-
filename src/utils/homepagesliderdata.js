@@ -13,7 +13,7 @@ export const HomepageSliderImage = [
     id: 2,
     src: "/images/2.jpg",
     alt: "book2",
-    title: "Dogshit Saved My Life ",
+    title: "Dogshit Saved Life ",
     writer: "Karl Wiggins",
     price: "400TK",
     discountPrice: "250TK",
