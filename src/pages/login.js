@@ -23,7 +23,8 @@ const Login = () => {
         maxW={539}
         h={540}
         bgColor="#F7F5EE"
-        padding={{base:"5px 40px 25px 40px", md:"50px auto"}}
+        padding={{ base: "5px 40px 25px 40px" }}
+        margin={{ md: "50px auto" }}
         borderRadius={10}
         paddingBottom={100}
       >
@@ -33,7 +34,7 @@ const Login = () => {
             Welcome to Pathok Point! Please Log in
           </Text>
           <Box maxW={392} margin="30px auto">
-            <FormControl w="100%" >
+            <FormControl w="100%">
               <FormLabel fontSize={16} fontWeight={400}>
                 Email or Phone Number
               </FormLabel>
@@ -45,7 +46,7 @@ const Login = () => {
                 fontSize={12}
               />
             </FormControl>
-            <FormControl w="100%" >
+            <FormControl w="100%">
               <FormLabel fontSize={16} fontWeight={400}>
                 Password
               </FormLabel>
@@ -125,7 +126,6 @@ const Login = () => {
             justifyContent="space-around"
             maxW={300}
             margin="25px auto 15px auto"
-            
           >
             <Text fontSize={16} fontStyle="italic">
               Don’t have an account ?
