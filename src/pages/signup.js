@@ -22,7 +22,7 @@ const Signup = () => {
       <Box
         maxW={539}
         bgColor="#F7F5EE"
-        margin={{ base: "5px 40px 5px 40px", md: "50px auto" }}
+        padding={{ base: "5px 40px 5px 40px", md: "50px auto" }}
         borderRadius={10}
       >
         <Box paddingTop={10}>
