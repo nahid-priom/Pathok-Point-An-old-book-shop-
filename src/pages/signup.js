@@ -22,7 +22,7 @@ const Signup = () => {
       <Box
         maxW={539}
         bgColor="#F7F5EE"
-        margin={{ base: "5px 12px 5px 12px", md: "50px auto" }}
+        margin={{ base: "5px 40px 5px 40px", md: "50px auto" }}
         borderRadius={10}
       >
         <Box paddingTop={10}>
@@ -94,7 +94,7 @@ const Signup = () => {
           </Box>
           <Box maxW={392} margin="20px auto">
             <PathokButton
-              text="Login"
+              text="Create Account"
               width="100%"
               height={35}
               bgColor="#FFD707"

@@ -13,15 +13,19 @@ export const Footer = () => {
       <Box
         display="flex"
         flexDirection="row"
-        flexWrap={{base:"wrap", md:"nowrap"}}
+        flexWrap={{ base: "wrap", md: "nowrap" }}
         justifyContent="space-around"
         alignItems="baseline"
         paddingTop={{ base: "20px", md: "40px" }}
-        paddingLeft={{ base: "30px", md:"300px" }}
-        
+        paddingLeft={{ base: "30px", md: "300px" }}
       >
-        <Box color="#fff" paddingBottom="20px" flex={{base: "50%", md: "1"}} >
-          <Text fontSize={23} fontWeight={600}>
+        <Box
+          fontSize={{ base: "12px", md: "16px" }}
+          color="#fff"
+          paddingBottom="20px"
+          flex={{ base: "50%", md: "1" }}
+        >
+          <Text fontSize={{ base: "16px", md: "23px" }} fontWeight={600}>
             Useful Links
           </Text>
           <Text>Categories</Text>
@@ -29,8 +33,14 @@ export const Footer = () => {
           <Text>Authors</Text>
           <Text>Publications</Text>
         </Box>
-        <Box color="#fff" paddingBottom="20px" flex={{base: "50%", md: "1"}} paddingLeft={{base:"35px", md:"0px"}}>
-          <Text fontSize={23} fontWeight={600}>
+        <Box
+          color="#fff"
+          fontSize={{ base: "12px", md: "16px" }}
+          paddingBottom="20px"
+          flex={{ base: "50%", md: "1" }}
+          paddingLeft={{ base: "35px", md: "0px" }}
+        >
+          <Text fontSize={{ base: "16px", md: "23px" }} fontWeight={600}>
             Help
           </Text>
           <Text>Books</Text>
@@ -39,8 +49,13 @@ export const Footer = () => {
           <Text>Gift Card</Text>
           <Text>Stationery</Text>
         </Box>
-        <Box color="#fff" paddingBottom="20px" flex={{base: "1px", md: "1"}}>
-          <Text fontSize={23} fontWeight={600}>
+        <Box
+          color="#fff"
+          fontSize={{ base: "12px", md: "16px" }}
+          paddingBottom="20px"
+          flex={{ base: "1px", md: "1" }}
+        >
+          <Text fontSize={{ base: "16px", md: "23px" }} fontWeight={600}>
             Payment
           </Text>
           <Text>Order Track</Text>
@@ -83,7 +98,13 @@ export const Footer = () => {
         </Box>
       </Box>
       <Divider orientation="horizontal"></Divider>
-      <Text textAlign="center" color="#fff" marginTop={5} fontSize={12} paddingBottom={3}>
+      <Text
+        textAlign="center"
+        color="#fff"
+        marginTop={5}
+        fontSize={12}
+        paddingBottom={3}
+      >
         Copyright © 2023 Pahtok Point
       </Text>
     </Box>

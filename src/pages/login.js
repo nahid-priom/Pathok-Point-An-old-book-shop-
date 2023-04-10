@@ -23,7 +23,7 @@ const Login = () => {
         maxW={539}
         h={540}
         bgColor="#F7F5EE"
-        margin={{base:"10px 12px 40px 12px", md:"50px auto"}}
+        margin={{base:"5px 40px 25px 40px", md:"50px auto"}}
         borderRadius={10}
         paddingBottom={100}
       >
